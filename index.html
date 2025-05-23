@@ -15,6 +15,7 @@
   <Form action="nome" method="post">
     
       <fieldset>
+        <legend><h3><b>Dados Pessoais</b></h3></legend>
         <label for="Nome"><b>Nome</b></label> <br>
         <input type="text" name="nome" id="nome"> <br>
   <label for endereço><b>Endereço</b></label> <br>
@@ -33,6 +34,47 @@
           <input type="number" name="cc" id="cc">
           </fieldset>
             <br>
+            <fieldset>
+              <legend><b>Gênero</b></legend>
+              <label>
+                <input type="radio" name="genero" value="masculino">
+                Masculino
+              </label><br>
+              <label>
+                <input type="radio" name="genero" value="feminino">
+                Feminino
+              </label><br>
+              <label>
+                <input type="radio" name="genero" value="outro">
+                Outro
+              </label>
+            </fieldset>
+            <br>
+            <fieldset>
+              <legend><b>Interesses</b></legend>
+              <label>
+                <input type="checkbox" name="interesse" value="esportes">
+                Esportes
+              </label><br>
+              <label>
+                <input type="checkbox" name="interesse" value="musica">
+                Música
+              </label><br>
+              <label>
+                <input type="checkbox" name="interesse" value="tecnologia">
+                Tecnologia
+              </label><br>
+              <label>
+                <input type="checkbox" name="interesse" value="judeus">
+                Judeus
+              </label>
+            </fieldset>
+            <form action="nome" method="post" enctype="multipart/form-data">
+              <label for="arquivo">Anexar arquivo:</label><br>
+              <input type="file" name="arquivo" id="arquivo"><br><br>
+            
+              <input type="submit" value="Enviar">
+            </form>
   <p>
     
   </p>
