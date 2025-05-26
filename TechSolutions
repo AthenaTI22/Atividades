@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TechSolutions</title>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <h1>TechSolutions</h1>
+    
+    <img src="https://img1.wsimg.com/isteam/ip/76a2ccca-462d-47b7-979f-a7b7d8be4e5c/0008778a-baa5-42a7-83da-2b61109a6f2c.jpg" alt="Logomarca da TechSolutions" height="200" width="350">
+
+    <!-- Apresentação -->
+    <h2>Quem somos?</h2>
+    <p>A TechSolutions é uma startup baiana voltada para soluções tecnológicas para pequenas e médias empresas. Nosso objetivo é oferecer inovação, praticidade e eficiência para negócios em crescimento.</p>
+
+    <!-- Serviços Oferecidos -->
+    <h2>Serviços</h2>
+    <ul>
+        <li>Desenvolvimento de Sites Responsivos</li>
+        <li>Consultoria em Transformação Digital</li>
+        <li>Automação de Processos Empresariais</li>
+    </ul>
+
+    <!-- Nossa Equipe -->
+    <h2>Nossa Equipe</h2>
+    <ul>
+        <li>Joana Santana – Desenvolvedora Front-End</li>
+        <li>Rafael Silva – Especialista em UX/UI</li>
+    </ul>
+
+    <!-- Contato -->
+    <h2>Contato</h2>
+    <p>Email: contato@techsolutions.com<br>
+       Telefone: (71) 99999-9999</p>
+
+    <!-- Imagem -->
+    <h2>Nosso Trabalho</h2>
+    <img src="https://assets-blog.hostgator.com.br/wp-content/uploads/2024/04/AnyConv.com__Captura-de-tela-2024-04-18-173844.webp" alt="Imagem representando tecnologia" width="400" height="200">
+    <img src="https://devuptime.com.br/wp-content/uploads/2025/05/consultoria-em-transformacao-digital-para-empresas-vendas-online-1024x576.jpg"alt="Imagem representando Consultoria em Transformação Digital" width="400" height="200">
+    <br>
+    <img src="https://www.agenciamacan.com.br/galeria/203574642exemplo-site-responsivo.jpg" alt="Imagem representando tecnologia" width="400" height="200">
+    <img src="https://cdn.vev.design/cdn-cgi/image/f=auto,q=82/private/pK53XiUzGnRFw1uPeFta7gdedx22/image/jFZhOQGjLk.png" alt="Imagem representando tecnologia" width="400" height="200">
+
+
+    <!-- Links -->
+    <h2>Nos encontre online</h2>
+    <p>
+        <a href="https://www.instagram.com/techsolutions" target="_blank">Instagram da TechSolutions</a><br>
+        <a href="https://www.google.com/maps" target="_blank">Localização no Google Maps</a>
+    </p>
+
+</body>
+</html>
