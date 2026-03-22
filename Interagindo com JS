@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Interação JS</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f1f5f9;
+    margin: 0;
+    padding: 20px;
+}
 
+/* Container central */
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* GRID PRINCIPAL */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background: #38bdf8;
+    color: #0f172a;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    background: #020617;
+    border-radius: 12px;
+    min-height: 100px;
+}</style>
+</head>
+<body>
+<div class="container">
+
+    <h2>Interaja com o sistema.</h2>
+
+    <div class="grid">
+
+        <!-- Cada bloco vira um "card" -->
+        <div class="card">
+            <h3>Nome</h3>
+            <input type="text" id="nome">
+            <button onclick="mostrarNome()">Mostrar</button>
+        </div>
+
+        <div class="card">
+            <h3>Área do Triângulo</h3>
+            <input type="number" id="base" placeholder="Base">
+            <input type="number" id="altura" placeholder="Altura">
+            <button onclick="calcularAreaTriangulo()">Calcular</button>
+        </div>
+
+        <div class="card">
+            <h3>Idade em dias</h3>
+            <input type="number" id="idadeDias">
+            <button onclick="calcularIdadeDias()">Calcular</button>
+        </div>
+
+        <div class="card">
+            <h3>Converter idade</h3>
+            <input type="number" id="idadeCompleta">
+            <button onclick="converterIdade()">Converter</button>
+        </div>
+
+        <div class="card">
+            <h3>Média</h3>
+            <input type="number" id="n1" placeholder="Nota 1">
+            <input type="number" id="n2" placeholder="Nota 2">
+            <input type="number" id="n3" placeholder="Nota 3">
+            <button onclick="calcularMedia()">Calcular</button>
+        </div>
+
+        <div class="card">
+            <h3>Desconto</h3>
+            <input type="number" id="preco" placeholder="Preço">
+            <input type="number" id="desconto" placeholder="%">
+            <button onclick="calcularDesconto()">Calcular</button>
+        </div>
+
+        <div class="card">
+            <h3>Tabuada</h3>
+            <input type="number" id="numero">
+            <button onclick="tabuada()">Mostrar</button>
+        </div>
+
+        <div class="card">
+            <h3>Metros → CM</h3>
+            <input type="number" id="metros">
+            <button onclick="converterMedida()">Converter</button>
+        </div>
+
+    </div>
+
+    <div id="resultado"></div>
+
+</div>
+
+    <script>
+        function mostrar(texto) {
+            document.getElementById("resultado").innerHTML += texto + "<br>";
+        }
+
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+        }
+
+        function mostrarNome() {
+            limpar();
+            let nome = document.getElementById("nome").value;
+            mostrar("Olá, " + nome + "!");
+        }
+
+        function calcularAreaTriangulo() {
+            limpar();
+            let base = Number(document.getElementById("base").value);
+            let altura = Number(document.getElementById("altura").value);
+            let area = (base * altura) / 2;
+            mostrar("Área: " + area);
+        }
+
+        function calcularIdadeDias() {
+            limpar();
+            let anos = Number(document.getElementById("idadeDias").value);
+            mostrar("Dias vividos: " + (anos * 365));
+        }
+
+        function converterIdade() {
+            limpar();
+            let anos = Number(document.getElementById("idadeCompleta").value);
+            mostrar("Meses: " + (anos * 12));
+            mostrar("Dias: " + (anos * 365));
+        }
+
+        function calcularMedia() {
+            limpar();
+            let n1 = Number(document.getElementById("n1").value);
+            let n2 = Number(document.getElementById("n2").value);
+            let n3 = Number(document.getElementById("n3").value);
+            let media = (n1 + n2 + n3) / 3;
+            mostrar("Média: " + media.toFixed(2));
+        }
+
+        function calcularDesconto() {
+            limpar();
+            let preco = Number(document.getElementById("preco").value);
+            let desconto = Number(document.getElementById("desconto").value);
+            let final = preco - (preco * desconto / 100);
+            mostrar("Preço final: R$ " + final.toFixed(2));
+        }
+
+        function tabuada() {
+            limpar();
+            let numero = Number(document.getElementById("numero").value);
+
+            for (let i = 1; i <= 10; i++) {
+                mostrar(numero + " x " + i + " = " + (numero * i));
+            }
+        }
+
+        function converterMedida() {
+            limpar();
+            let metros = Number(document.getElementById("metros").value);
+            mostrar(metros + "m = " + (metros * 100) + "cm");
+        }
+    </script>
+
+</body>
+</html>
