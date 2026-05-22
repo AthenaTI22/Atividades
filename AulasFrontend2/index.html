@@ -1,0 +1,210 @@
+SINTAXE DO EVENTLISTNER: elemento.addEventLisner('evento', funçao)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  		  <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - EventListner</title>
+</head>
+<body>
+    <p>Escreverei aqui</p>
+
+    <button id="btn">Clique aqui</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', 
+        function() {
+            alert('Você clicou no botão!');
+        });
+    </script>
+</body>
+</html>	
+
+<br>
+Exemplo 2 - Mouse
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - EventListner</title>
+</head>
+<body>
+    <div id="caixa" style="width: 200px; height: 200px; background-color: red">
+    aaaaaaa
+    </div>
+
+    <script>
+        const cx = document.getElementById('caixa');
+        cx.addEventListener('mouseover', function() {
+            cx.style.backgroundColor = 'blue';
+        });
+        cx.addEventListener('mouseout', function() {
+            cx.style.backgroundColor = 'red';
+        });
+    </script>
+</body>
+</html>
+
+<br>
+Exemplo 3 - Teclado
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - EventListner</title>
+</head>
+<body>
+   <input type="text" id="campo" placeholder="Digite algo...">
+   <p id="texto">Texto aqui</p>
+
+    <script>
+        const cmp = document.getElementById('campo');
+        const txt = document.getElementById('texto');
+
+        cmp.addEventListener('keyup', function() {
+            txt.innerHTML = event.key;
+        });
+    </script>
+</body>
+</html>
+<br>
+Exemplo 4 - Captura da tecla enter
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - EventListner</title>
+</head>
+<body>
+   <input type="text" id="wnome" placeholder="Digite seu nome">
+
+   <script>
+        const nome = document.getElementById('wnome');
+        nome.addEventListener('keydown', function(event){
+            if(event.key === 'Enter'){
+                alert('Tecla Enter pressionada!');
+            }
+        });
+   </script>
+</body>
+</html>
+<br>
+Exemplo 5 - Contador de Caracteres
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - EventListner</title>
+</head>
+<body>
+   <input type="text" id="msg" placeholder="Enter your message">
+   <p id="contador">.....</p>
+
+    <script>
+        const mensagem = document.getElementById('msg');
+        const conta = document.getElementById('contador');
+        mensagem.addEventListener('keyup', function() {
+          
+            conta.innerHTML = 'Quantidade de caracteres:' + mensagem.value.length;
+        });
+
+     </script>
+</body>
+</html>
+
+Exemplo 6 - Escolhendo produto
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - EventListner</title>
+</head>
+<body>
+   <select id="produtos">
+    <option value="1">Notebook</option>
+    <option value="2">Smartphone</option>
+    <option value="3">Tablet</option>
+   </select>
+
+   <p id="resultado"></p>
+
+   <script>
+    const prod = document.getElementById('produtos');
+    const resulta = document.getElementById('resultado');
+
+    prod.addEventListener('change', function(){
+        
+        resulta.innerHTML = prod.value;
+    })
+
+   </script>
+</body>
+</html>
+
+Exemplo 7 - Checkbox
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - EventListner</title>
+</head>
+<body>
+  <input type="checkbox" id="aceite" placeholder="aceito os termos">
+  <p id="mensagem">...</p>
+
+  <script>
+    const aceitado = document.getElementById('aceite');
+    const msg = document.getElementById('mensagem');
+
+    aceitado.addEventListener('change', function() {
+
+      if (aceitado.checked) {
+        msg.innerHTML = 'Termos aceitos';
+      } else {
+        msg.innerHTML = 'Termos não aceitos';
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+Exemplo 8 - Capturar formulário
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - EventListner</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="wnome" placeholder="Digite o seu nome">
+        <button>Enviar</button>
+    </form>
+    <script>
+        const formulario = document.getElementById('myForm');
+             formulario.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita o envio do formulário
+             alert('Formulário enviado!');
+            });
+     
+    </script>
+</body>
+</html>
